@@ -70,10 +70,11 @@ function getHeight(el) {
 function footerAccordion(e) {
 	e.preventDefault();
 	// get the element
-	var hdr = e.target;
+	if (!event.target.matches('.footer-fancy') && !event.target.matches('.plus')) return;
+
+	var hdr = e.target.closest('.footer-fancy');
 	var hdrPlus = hdr.querySelector('.plus');
 	var hdrPlusVal = hdr.querySelector('.plus').innerText;
-	console.log(hdrPlus)
 
 	// get the UL
 	var ul = hdr.nextElementSibling;
@@ -90,18 +91,26 @@ function footerAccordion(e) {
 }
 
 
+console.log(window.screen.width)
 // set up accordion for small screens
-if (window.screen.width <= 900) {
-	// get the heights of the ULs so we can animate the height
-	ulOne = footer.querySelector('.footer-links ul').offsetHeight;
-	ulTwo = footer.querySelector('.footer-links.second ul').offsetHeight;
-	// this will hide the second list and set up some styles
-	footer.classList.add('accordion');
-	// call the accordion
-	footer.addEventListener('click', footerAccordion);
-} else {
-	footer.classList.remove('accordion');
+function checkScreen() {
+	if (window.screen.width <= 900) {
+		// get the heights of the ULs so we can animate the height
+		ulOne = footer.querySelector('.footer-links ul').offsetHeight;
+		ulTwo = footer.querySelector('.footer-links.second ul').offsetHeight;
+		// this will hide the second list and set up some styles
+		footer.classList.add('accordion');
+		// call the accordion
+		footer.addEventListener('click', footerAccordion);
+	} else {
+		footer.classList.remove('accordion');
+	}
 }
+checkScreen();
+window.onresize = checkScreen;
 // END footer accordion links for mobile
 
+
+
 }));
+

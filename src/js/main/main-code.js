@@ -1,12 +1,4 @@
-/*! dyode-test v0.0.1 | (c) 2020 Michael Roberts | MIT License | https://github.com/surfwoodroad/DYODE-test */
-/**
- * Element.matches() polyfill (simple version)
- * https://developer.mozilla.org/en-US/docs/Web/API/Element/matches#Polyfill
- */
-if (!Element.prototype.matches) {
-	Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
-}
-document.addEventListener("DOMContentLoaded", (function(){
+document.addEventListener("DOMContentLoaded", function(){
 	
 	// fixed header code
     var scrollPosition = window.scrollY;
@@ -17,7 +9,7 @@ document.addEventListener("DOMContentLoaded", (function(){
 	var annc_height = announcement.offsetHeight;
 	var header_height = headerNav.offsetHeight;
 
-window.addEventListener('scroll', (function() {
+window.addEventListener('scroll', function() {
 
 	scrollPosition = window.scrollY;
 	
@@ -30,7 +22,7 @@ window.addEventListener('scroll', (function() {
 		headerSpacer.style.height = 0;
     }
 
-}));
+});
 
 // END fixed header code
 
@@ -38,7 +30,7 @@ window.addEventListener('scroll', (function() {
 
 var hamburgerBtn = document.querySelector('.hamburger');
 var hamburgerMenu = document.querySelector('.main_nav');
-hamburgerBtn.addEventListener('click', (function(e) {
+hamburgerBtn.addEventListener('click', function(e) {
     e.preventDefault();
     if (hamburgerMenu.classList.contains('menu-display')) {
         hamburgerMenu.classList.remove('menu-display');
@@ -47,17 +39,17 @@ hamburgerBtn.addEventListener('click', (function(e) {
         hamburgerMenu.classList.add('menu-display');
         hamburgerBtn.classList.add('make-x');
       }
-}));
+});
 
 var regularMenuItem = document.querySelector('.main_nav');
 
-regularMenuItem.addEventListener('click', (function() {
+regularMenuItem.addEventListener('click', function() {
     var hamburgerMenuItem = document.querySelector('.main_nav.menu-display a');
     if (hamburgerMenuItem) {
         hamburgerMenu.classList.remove('menu-display');
         hamburgerBtn.classList.remove('make-x');
     }
-}));
+});
 
 // END hamburger nav code
 
@@ -119,5 +111,4 @@ window.onresize = checkScreen;
 
 
 
-}));
-
+});
