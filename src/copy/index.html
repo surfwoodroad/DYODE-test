@@ -6,7 +6,7 @@
 	<title>Michael Roberts | DYODE test</title>
 	<script>document.documentElement.classList.remove("no-js")</script>
 	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/main.min.css">
 </head>
 <body>
 	<article class="announcement">
@@ -88,7 +88,7 @@
 
 	<section class="container product-carousel-wrap">
 		<h2 class="section_hdr">New Arrivals</h2>
-		<div class="product-carousel" data-flickity='{ "contain": true, "prevNextButtons": true, "pageDots": false }'>
+		<div class="product-carousel" data-flickity='{ "contain": true, "prevNextButtons": true, "pageDots": false, "lazyLoad": 2 }'>
 			<article class="carousel-cell">
 				<a href="#" class="product-carousel-content">
 					<img src="/images/Product-Image-1.jpg" alt="It's a shirt!" />
@@ -139,7 +139,7 @@
 			</div>
 			<div class="carousel-cell">
 				<a href="#" class="product-carousel-content">
-					<img src="/images/Product-Image-1.jpg" alt="It's a shirt!" />
+					<img data-flickity-lazyload-src="/images/Product-Image-1.jpg" alt="It's a shirt!" />
 					<h2>Product Title</h2>
 					<h3>Women's T-Shirt</h3>
 					<h4 class="price">$19.99</h4>
@@ -147,7 +147,7 @@
 			</div>
 			<div class="carousel-cell">
 				<a href="#" class="product-carousel-content">
-					<img src="/images/Product-Image-1.jpg" alt="It's a shirt!" />
+					<img data-flickity-lazyload-src="/images/Product-Image-1.jpg" alt="It's a shirt!" />
 					<h2>Product Title</h2>
 					<h3>Women's T-Shirt</h3>
 					<h4 class="price">$19.99</h4>
@@ -155,7 +155,7 @@
 			</div>
 			<div class="carousel-cell">
 				<a href="#" class="product-carousel-content">
-					<img src="/images/Product-Image-1.jpg" alt="It's a shirt!" />
+					<img data-flickity-lazyload-src="/images/Product-Image-1.jpg" alt="It's a shirt!" />
 					<h2>Product Title</h2>
 					<h3>Women's T-Shirt</h3>
 					<h4 class="price">$19.99</h4>
@@ -263,9 +263,9 @@
 			<div class="footer-social">
 				<h2 class="footer-fancy">Follow Us</h2>
 				<ul>
-					<li><a href="#"><img src="/images/icon-fb.png" alt="Follow us on Facebook" /></a></li>
-					<li><a href="#"><img src="/images/icon-ig.png" alt="Follow us on Instagram" /></a></li>
-					<li><a href="#"><img src="/images/icon-tw.png" alt="Follow us on Twitter" /></a></li>
+					<li><a href="#"><img src="/images/icon-fb.png" alt="Follow us on Facebook" loading="lazy" /></a></li>
+					<li><a href="#"><img src="/images/icon-ig.png" alt="Follow us on Instagram" loading="lazy" /></a></li>
+					<li><a href="#"><img src="/images/icon-tw.png" alt="Follow us on Twitter" loading="lazy" /></a></li>
 				</ul>
 			</div>
 		</div>
@@ -274,7 +274,7 @@
 
 
 	<!-- Scripts -->
-	<script src="js/main.polyfills.js"></script>
+	<script src="js/main.polyfills.min.js"></script>
 	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 </body>

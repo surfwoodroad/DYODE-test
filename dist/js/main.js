@@ -91,7 +91,6 @@ function footerAccordion(e) {
 }
 
 
-console.log(window.screen.width)
 // set up accordion for small screens
 function checkScreen() {
 	if (window.screen.width <= 900) {
