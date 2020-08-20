@@ -1,4 +1,4 @@
-/*! dyode-test v0.0.1 | (c) 2020 Michael Roberts | MIT License | http://link-to-your-git-repo.com */
+/*! dyode-test v0.0.1 | (c) 2020 Michael Roberts | MIT License | https://github.com/surfwoodroad/DYODE-test */
 document.addEventListener("DOMContentLoaded", (function(){
 	
 	// fixed header code
