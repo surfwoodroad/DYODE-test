@@ -45,5 +45,9 @@
 	},
 	"dependencies": {
 		"flickity": "^2.2.1"
-	}
+	},
+	"scripts": {
+		"heroku-prebuild": "",
+		"heroku-postbuild": "gulp"
+	  }
 }
